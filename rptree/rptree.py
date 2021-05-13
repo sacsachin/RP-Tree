@@ -43,7 +43,7 @@ class _TreeGenerator:
         return self._tree
 
     def _tree_head(self):
-        self._tree.append(f"{self.root_dir}{os.sep}")
+        self._tree.append(f"\uf07c {self.root_dir}{os.sep}")
         self._tree.append(PIPE)
 
     def _tree_body(self, directory, prefix=""):
@@ -70,7 +70,7 @@ class _TreeGenerator:
         return entries
 
     def _add_directory(self, directory, index, entries_count, prefix, connector):
-        self._tree.append(f"{prefix}{connector} {directory.name}{os.sep}")
+        self._tree.append(f"{prefix}{connector} \uf07c{directory.name}{os.sep}")
         if index != entries_count - 1:
             prefix +=  PIPE_PREFIX
         else:
